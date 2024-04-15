@@ -1,4 +1,5 @@
 public class TarjetaCredito {
+    // Atributos de la clase TarjetaCredito
     private String numero;
     private String titular;
     private String fechaExpiracion;
@@ -6,6 +7,7 @@ public class TarjetaCredito {
     private double limiteCredito;
     private double saldoDisponible;
 
+    // Constructor
     public TarjetaCredito(String numero, String titular, String fechaExpiracion, int cvv, double limiteCredito) {
         this.numero = numero;
         this.titular = titular;
