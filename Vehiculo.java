@@ -3,12 +3,13 @@
  */
 
 public class Vehiculo {
-    public String matricula;
-    public String marca;
-    public String modelo;
-    public String color;
-    public double tarifa;
-    public boolean disponible;
+    // Atributos
+    private String matricula;
+    private String marca;
+    private String modelo;
+    private String color;
+    private double tarifa;
+    private boolean disponible;
 
     // el método constructor de la clase Vehiculo
     public Vehiculo(String matricula, String marca, String modelo, String color, double tarifa) {
@@ -47,11 +48,10 @@ public class Vehiculo {
 
     public static void main(String[] args) {
         Vehiculo vehiculo1 = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
-        System.out.println("Matricula: " + vehiculo1.matricula);
-        System.out.println("Marca y modelo: " + vehiculo1.marca + " " + vehiculo1.modelo);
-        System.out.println("Color: " + vehiculo1.color);
-        System.out.println("Tarifa: " + vehiculo1.tarifa);
-        Vehiculo vehiculo2 = new Vehiculo("2345 JVM", "SEAT", "León", "Negro", 80.0);
-        
+        System.out.println("Matricula: " + vehiculo1.getMatricula());
+        System.out.println("Marca y modelo: " + vehiculo1.getMarca() + " " + vehiculo1.getModelo());
+        System.out.println("Color: " + vehiculo1.getColor());
+        System.out.println("Tarifa: " + vehiculo1.getTarifa());        
+        //Vehiculo vehiculo2 = new Vehiculo("2345 JVM", "SEAT", "León", "Negro", 80.0);        
     }    
 }
