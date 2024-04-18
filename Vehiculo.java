@@ -47,7 +47,7 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
-    // Método main para probar la clase TarjetaCredito
+    // Método main para probar la clase Vehiculo
     public static void main(String[] args) {
         Vehiculo vehiculo1 = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
         System.out.println("Matricula: " + vehiculo1.getMatricula());
