@@ -74,7 +74,7 @@ public class PilaArray {
     }
 
     public static void main(String[] args) {
-        System.out.println("Testeando Clase PilaBasica");
+        System.out.println("Testeando Clase PilaArray");
         // Se define una constante llamada LIMITE
         final int LIMITE = 5;
 
