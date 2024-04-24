@@ -70,6 +70,7 @@ public class Pila {
         return mensaje;
     }
 
+    // Método main para probar la clase Vehiculo
     public static void main(String[] args) {
         System.out.println("Testeando Clase Pila");
         // Se define una constante llamada LIMITE
