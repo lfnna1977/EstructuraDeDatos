@@ -57,6 +57,7 @@ public class ColaLineal {
         }
     }
 
+    // Método main para probar la clase ColaLineal
     public static void main(String[] args) {
         ColaLineal cola = new ColaLineal();
 
