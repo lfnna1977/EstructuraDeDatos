@@ -3,9 +3,8 @@ public class PilaLineal {
     private static final int TAMPILA = 5;
     private Object[] datos;
     private int cima;
-
-    // Metodos
-
+    
+    // Getters y setters
     public static int getTampila() {
         return TAMPILA;
     }
