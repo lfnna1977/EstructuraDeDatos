@@ -51,10 +51,10 @@
     @Override
     public String toString() {
         return "Vehiculo{" +
-                "Matricula: " + matricula + 
-                ", Marca: " + marca + 
-                ", Modelo: " + modelo + 
-                ", Molor: " + color +
+                "Matricula: '" + matricula + '\'' +
+                ", Marca: '" + marca + '\'' +
+                ", Modelo: '" + modelo + '\'' +
+                ", Color: '" + color + '\'' +
                 ", Tarifa: " + tarifa +
                 ", Disponible: " + disponible +
                 '}';
@@ -62,9 +62,13 @@
 
     // Método main para probar la clase Vehiculo
     public static void main(String[] args) {
+        // Declarando e instanciando un vehiculo
         Vehiculo vehiculo = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
+
+        // Mostrar el contenido de la clase vehiculo mediante sobrecarga en el método toString
         System.out.println(vehiculo);
 
+        // Sacando la información mediante los getterss
         System.out.println("Matricula: " + vehiculo.getMatricula());
         System.out.println("Marca y modelo: " + vehiculo.getMarca() + " " + vehiculo.getModelo());
         System.out.println("Color: " + vehiculo.getColor());
