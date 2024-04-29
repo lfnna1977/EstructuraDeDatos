@@ -2,14 +2,14 @@
  * Clase Vehiculo
  */
 
-public class Vehiculo {
+ public class Vehiculo {
     // Atributos
     private String matricula;
     private String marca;
     private String modelo;
     private String color;
     private double tarifa;
-    private boolean disponible;
+    private boolean disponible;   
 
     // el método constructor de la clase Vehiculo
     public Vehiculo(String matricula, String marca, String modelo, String color, double tarifa) {
@@ -21,7 +21,7 @@ public class Vehiculo {
         this.disponible = false;
     }
 
-    // Metodos
+    // Getters y setters
     public String getMatricula() {
         return this.matricula;
     }
@@ -47,12 +47,27 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
+    // Método toString para imprimir los detalles de la tarjeta
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "Matricula: " + matricula + 
+                ", Marca: " + marca + 
+                ", Modelo: " + modelo + 
+                ", Molor: " + color +
+                ", Tarifa: " + tarifa +
+                ", Disponible: " + disponible +
+                '}';
+    }
+
     // Método main para probar la clase Vehiculo
     public static void main(String[] args) {
-        Vehiculo vehiculo1 = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
-        System.out.println("Matricula: " + vehiculo1.getMatricula());
-        System.out.println("Marca y modelo: " + vehiculo1.getMarca() + " " + vehiculo1.getModelo());
-        System.out.println("Color: " + vehiculo1.getColor());
-        System.out.println("Tarifa: " + vehiculo1.getTarifa());
-    }    
+        Vehiculo vehiculo = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
+        System.out.println(vehiculo);
+
+        System.out.println("Matricula: " + vehiculo.getMatricula());
+        System.out.println("Marca y modelo: " + vehiculo.getMarca() + " " + vehiculo.getModelo());
+        System.out.println("Color: " + vehiculo.getColor());
+        System.out.println("Tarifa: " + vehiculo.getTarifa());        
+    }
 }
