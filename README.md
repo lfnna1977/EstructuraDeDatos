@@ -1,2 +1,2 @@
 # EstructuraDeDatos
-Material de la materia Estructura de Datos
+Material para la materia Estructura de Datos
