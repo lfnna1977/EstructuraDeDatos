@@ -62,7 +62,7 @@
 
     // Método main para probar la clase Vehiculo
     public static void main(String[] args) {
-        // Declarando e instanciando un vehiculo
+        // Declarando e instanciando la clase Vehiculo
         Vehiculo vehiculo = new Vehiculo("4050 ABJ", "VW", "GTI", "Blanco", 100.0);
 
         // Mostrar el contenido de la clase vehiculo mediante sobrecarga en el método toString
