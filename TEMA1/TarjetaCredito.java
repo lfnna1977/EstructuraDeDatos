@@ -1,3 +1,7 @@
+/*
+ * Clase TarjetaCredito
+ */
+
 public class TarjetaCredito {
     // Atributos de la clase TarjetaCredito
     private String numero;
