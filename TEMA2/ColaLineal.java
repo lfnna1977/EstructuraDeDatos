@@ -25,7 +25,7 @@ public class ColaLineal {
     }
 
     // Inserta un elemento a la cola
-    public void insertar(Object elemento) throws Exception{
+    public void encolar(Object elemento) throws Exception {
         if (!colaLlena()){
             this.listaCola[++fin] = elemento;
         } else {
@@ -34,9 +34,9 @@ public class ColaLineal {
     }
 
     // Elimina y devuelve el elemento al frente de la cola
-    public Object quitar() throws Exception {
+    public Object desencolar() throws Exception {
         if (!colaVacia()){
-            return this.listaCola[frente++];
+            return this.listaCola[this.frente++];
         } else {
             throw new Exception("Cola vacia");
         }
@@ -49,11 +49,23 @@ public class ColaLineal {
     }
 
     // Muestra el elemento que esta al frente de la cola sin eliminarlo
-    public Object frenteCola() throws Exception{
+    public Object frenteCola() throws Exception {
         if (!colaVacia()){
-            return this.listaCola[frente];
+            return this.listaCola[this.frente];
         } else {
             throw new Exception("Cola vacia");
+        }
+    }
+
+    public String imprimirCola(){
+        String resultado = "";
+        if (colaVacia()){
+            return resultado = "La cola esta vacia";
+        } else {
+            for (int i = this.frente; i < (this.fin + 1); i++){
+                resultado += "[" + i + "]" + this.listaCola[i] + "\n";
+            }
+            return resultado;
         }
     }
 
@@ -63,9 +75,9 @@ public class ColaLineal {
 
         try {
             // Insertar elementos en la cola
-            cola.insertar(10);
-            cola.insertar(20);
-            cola.insertar(30);            
+            cola.encolar(10);
+            cola.encolar(20);
+            cola.encolar(30);            
 
             // Mostrar el frente de la cola
             System.out.println("Frente de la cola: " + cola.frenteCola());
@@ -73,7 +85,7 @@ public class ColaLineal {
             // Quitar elementos de la cola y mostrarlos
             System.out.println("Quitando elementos de la cola:");
             while (!cola.colaVacia()) {
-                System.out.println(cola.quitar());
+                System.out.println(cola.desencolar());
             }
 
             // Verificar si la cola está vacía
