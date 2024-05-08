@@ -1,10 +1,12 @@
 public class Lista<T> {
     private Nodo<T> primero;
     private Nodo<T> ultimo;
+    private int tamanyo;
 
     public Lista() {
         this.primero = null;
         this.ultimo = null;
+        this.tamanyo = 0;
     }
 
     public void insertarAlInicio(T dato) {
@@ -16,6 +18,7 @@ public class Lista<T> {
             nuevoNodo.siguiente = primero;
             primero = nuevoNodo;
         }
+        tamanyo++;
     }
 
     public void insertarAlFinal(T dato) {
@@ -27,6 +30,24 @@ public class Lista<T> {
             ultimo.siguiente = nuevoNodo;
             ultimo = nuevoNodo;
         }
+        tamanyo++;
+    }
+
+    public void visualizar() {
+        Nodo<T> actual = primero;
+        while (actual != null) {
+            System.out.print(actual.dato + " ");
+            actual = actual.siguiente;
+        }
+        System.out.println();
+    }
+
+    public boolean estaVacia() {
+        return primero == null;
+    }
+
+    public int tamanyo(){
+        return this.tamanyo;
     }
 
     public T eliminarAlFinal(){
@@ -42,19 +63,6 @@ public class Lista<T> {
         ultimo = nodoPrevio;
         tamanyo--;
         return resultado;
-    }
-
-    public void visualizar() {
-        Nodo<T> actual = primero;
-        while (actual != null) {
-            System.out.print(actual.dato + " ");
-            actual = actual.siguiente;
-        }
-        System.out.println();
-    }
-
-    public boolean estaVacia() {
-        return primero == null;
     }
 
     // Otros métodos de la lista (eliminar, buscar, etc.) pueden ser implementados aquí
