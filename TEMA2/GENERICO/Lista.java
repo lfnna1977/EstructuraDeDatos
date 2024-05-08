@@ -29,6 +29,21 @@ public class Lista<T> {
         }
     }
 
+    public T eliminarAlFinal(){
+        if (estaVacia()) {
+            throw new IllegalStateException("La lista esta vacia");
+        }
+        T resultado = ultimo.dato;
+        Nodo<T> nodoPrevio = primero;
+        while (nodoPrevio.siguiente != ultimo) {
+            nodoPrevio = nodoPrevio.siguiente;
+        }
+        nodoPrevio.siguiente = null;
+        ultimo = nodoPrevio;
+        tamanyo--;
+        return resultado;
+    }
+
     public void visualizar() {
         Nodo<T> actual = primero;
         while (actual != null) {
