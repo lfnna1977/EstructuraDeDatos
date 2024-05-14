@@ -80,6 +80,13 @@ public class ArbolBinario {
         imprimirArbolRecursivo(raiz, 0);
     }
 
+    /*
+     * Este método imprimirArbol utiliza un recorrido inorden inverso (derecha-raiz-izquierda)
+     * para imprimir los nodos del árbol de manera que los nodos más profundos estén más
+     * a la izquierda y los nodos más superficiales estén más a la derecha.
+     * Esto produce una representación visual que se asemeja a un árbol binario, con los nodos
+     * más profundos en la parte superior y los nodos más superficiales en la parte inferior.
+     */
     private void imprimirArbolRecursivo(NodoBinario nodo, int nivel) {
         if (nodo != null) {
             imprimirArbolRecursivo(nodo.getDerecha(), nivel + 1);
