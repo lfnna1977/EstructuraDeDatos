@@ -64,7 +64,7 @@ public class ArbolBinario {
 
     // Método para contar el número total de nodos en el árbol
     public int tamanyo() {
-        return tamañoRecursivo(raiz);
+        return tamanyoRecursivo(raiz);
     }
 
     private int tamanyoRecursivo(NodoBinario nodo) {
