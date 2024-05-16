@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -150,7 +148,7 @@ public class ArbolBinario {
     }
 
     // Método para imprimir el árbol por niveles con mensaje de nivel
-    public void imprimirPorNivelesConMensaje() {
+    public void recorridoPorNiveles() {
         if (raiz == null) {
             return;
         }
@@ -176,7 +174,6 @@ public class ArbolBinario {
             nivel++;
         }
     }
-
-   
+    
     // Otros métodos...
 }
