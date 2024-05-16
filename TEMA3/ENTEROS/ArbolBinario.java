@@ -147,7 +147,7 @@ public class ArbolBinario {
         }
     }
 
-    // Método para imprimir el árbol por niveles con mensaje de nivel
+    // Método para imprimir el árbol por niveles 
     public void recorridoPorNiveles() {
         if (raiz == null) {
             return;
