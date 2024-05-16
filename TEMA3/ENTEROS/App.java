@@ -46,6 +46,6 @@ public class App {
         System.out.println();
 
         // Realiza el recorrido por niveles recursivo del árbol
-        arbol.imprimirPorNiveles();
+        arbol.imprimirPorNivelesConMensaje();
     }    
 }
