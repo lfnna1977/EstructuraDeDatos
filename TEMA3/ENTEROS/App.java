@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Árbol Binario de Números Enteros");
@@ -42,6 +44,19 @@ public class App {
         System.out.println("Recorrido preorden iterativo:");
         arbol.recorrerPreordenIterativo();
         System.out.println();
+
+        // Realiza el recorrido por niveles del árbol
+        List<List<Integer>> niveles = arbol.recorridoPorNiveles();
+
+        // Imprime los niveles del árbol
+        for (int i = 0; i < niveles.size(); i++) {
+            System.out.print("Nivel " + i + ": ");
+            List<Integer> nivel = niveles.get(i);
+            for (int j = 0; j < nivel.size(); j++) {
+                System.out.print(nivel.get(j) + " ");
+            }
+            System.out.println();
+        }
 
     }    
 }
