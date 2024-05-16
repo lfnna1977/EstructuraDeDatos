@@ -28,7 +28,7 @@ public class App {
         // Imprimir el árbol
         arbol.imprimirArbol();        
 
-        // Realiza el recorrido por niveles recursivo del árbol
+        // Realiza el recorrido por niveles del árbol
         arbol.recorridoPorNiveles();
     }    
 }
