@@ -146,5 +146,34 @@ public class ArbolBinario {
             }
         }
     }
+
+    // Método para realizar un recorrido por niveles en el árbol
+    public List<List<Integer>> recorridoPorNiveles() {
+        List<List<Integer>> niveles = new ArrayList<>();
+        if (raiz == null) {
+            return niveles;
+        }
+
+        Queue<NodoBinario> cola = new LinkedList<>();
+        cola.offer(raiz);
+
+        while (!cola.isEmpty()) {
+            int nivelSize = cola.size();
+            List<Integer> nivel = new ArrayList<>();
+            for (int i = 0; i < nivelSize; i++) {
+                NodoBinario actual = cola.poll();
+                nivel.add(actual.getDato());
+                if (actual.getIzquierda() != null) {
+                    cola.offer(actual.getIzquierda());
+                }
+                if (actual.getDerecha() != null) {
+                    cola.offer(actual.getDerecha());
+                }
+            }
+            niveles.add(nivel);
+        }
+
+        return niveles;
+    }
     // Otros métodos...
 }
