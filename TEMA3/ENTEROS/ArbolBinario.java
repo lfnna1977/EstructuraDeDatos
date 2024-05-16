@@ -149,18 +149,20 @@ public class ArbolBinario {
         }
     }
 
-    // Método para imprimir el árbol por niveles
-    public void imprimirPorNiveles() {
+    // Método para imprimir el árbol por niveles con mensaje de nivel
+    public void imprimirPorNivelesConMensaje() {
         if (raiz == null) {
             return;
         }
 
         Queue<NodoBinario> cola = new LinkedList<>();
         cola.offer(raiz);
+        int nivel = 0;
 
         while (!cola.isEmpty()) {
             int nivelSize = cola.size();
-            for (int i = 0; i < nivelSize; i++) {                
+            System.out.print("Nivel " + nivel + ": ");
+            for (int i = 0; i < nivelSize; i++) {
                 NodoBinario actual = cola.poll();
                 System.out.print(actual.getDato() + " ");
                 if (actual.getIzquierda() != null) {
@@ -171,6 +173,7 @@ public class ArbolBinario {
                 }
             }
             System.out.println(); // Cambio de línea después de imprimir todos los nodos en el nivel actual
+            nivel++;
         }
     }
 
