@@ -45,18 +45,7 @@ public class App {
         arbol.recorrerPreordenIterativo();
         System.out.println();
 
-        // Realiza el recorrido por niveles del árbol
-        List<List<Integer>> niveles = arbol.recorridoPorNiveles();
-
-        // Imprime los niveles del árbol
-        for (int i = 0; i < niveles.size(); i++) {
-            System.out.print("Nivel " + i + ": ");
-            List<Integer> nivel = niveles.get(i);
-            for (int j = 0; j < nivel.size(); j++) {
-                System.out.print(nivel.get(j) + " ");
-            }
-            System.out.println();
-        }
-
+        // Realiza el recorrido por niveles recursivo del árbol
+        arbol.imprimirPorNiveles();
     }    
 }
