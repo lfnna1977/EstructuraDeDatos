@@ -147,33 +147,23 @@ public class ArbolBinario {
         }
     }
 
-    // Método para realizar un recorrido por niveles en el árbol
+   // Método para realizar un recorrido por niveles en el árbol (recursivo)
     public List<List<Integer>> recorridoPorNiveles() {
         List<List<Integer>> niveles = new ArrayList<>();
-        if (raiz == null) {
-            return niveles;
-        }
-
-        Queue<NodoBinario> cola = new LinkedList<>();
-        cola.offer(raiz);
-
-        while (!cola.isEmpty()) {
-            int nivelSize = cola.size();
-            List<Integer> nivel = new ArrayList<>();
-            for (int i = 0; i < nivelSize; i++) {
-                NodoBinario actual = cola.poll();
-                nivel.add(actual.getDato());
-                if (actual.getIzquierda() != null) {
-                    cola.offer(actual.getIzquierda());
-                }
-                if (actual.getDerecha() != null) {
-                    cola.offer(actual.getDerecha());
-                }
-            }
-            niveles.add(nivel);
-        }
-
+        recorridoPorNivelesRecursivo(raiz, 0, niveles);
         return niveles;
+    }
+
+    private void recorridoPorNivelesRecursivo(NodoBinario nodo, int nivel, List<List<Integer>> niveles) {
+        if (nodo == null) {
+            return;
+        }
+        if (nivel >= niveles.size()) {
+            niveles.add(new ArrayList<>());
+        }
+        niveles.get(nivel).add(nodo.getDato());
+        recorridoPorNivelesRecursivo(nodo.getIzquierda(), nivel + 1, niveles);
+        recorridoPorNivelesRecursivo(nodo.getDerecha(), nivel + 1, niveles);
     }
     // Otros métodos...
 }
